@@ -40,3 +40,54 @@
     height: 50px;
     margin-left: 50px;
 }
+
+.body {
+    max-width: 500px;
+}
+
+.fornecedor {
+    color: hsl(26, 100%, 55%);
+}
+
+.nome-produto {
+    color: hsl(220, 13%, 13%);
+}
+
+.descri {
+    color: hsl(219, 9%, 45%);
+}
+
+.preco {
+    color: hsl(220, 13%, 13%);
+}
+
+.desc {
+    background-color: hsl(25, 100%, 94%);
+    color: hsl(26, 100%, 55%);
+}
+
+.preco-total {
+    text-decoration: line-through;
+    color: hsl(220, 14%, 75%);
+}
+
+.quant-prod {
+    background-color: hsl(223, 64%, 98%);
+}
+
+.menos {
+    background-color: #0000;
+    border: none;
+}
+
+.mais {
+    background-color: #0000;
+    border: none;
+}
+
+.add-cart-button {
+    background-color: hsl(26, 100%, 55%);
+    color: #fff;
+    box-shadow: 0px 10px 10px hsl(25, 100%, 94%);
+    border: none;
+}
