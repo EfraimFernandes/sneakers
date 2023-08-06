@@ -1,5 +1,6 @@
 var bolaDaVez = 1
 
+
 function imageSelected() {
     if(bolaDaVez === 1){
         imagemP1div.classList.add("border");
