@@ -97,6 +97,105 @@ imagemP4div.addEventListener('click', ()=>{
 
 
 
+// IMAGENS 
+
+var bolaDaVez2 = 1
+
+function imageSelected() {
+    if(bolaDaVez2 === 5){
+        imagemP5div.classList.add("border");
+        imagemP5.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-1.jpg"
+
+        imagemP6div.classList.remove("border");
+        imagemP6.classList.remove("opacity");
+        imagemP7div.classList.remove("border");
+        imagemP7.classList.remove("opacity");
+        imagemP8div.classList.remove("border");
+        imagemP8.classList.remove("opacity");
+    } else if(bolaDaVez2 === 6){
+        imagemP6div.classList.add("border");
+        imagemP6.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-2.jpg"
+
+        imagemP5div.classList.remove("border");
+        imagemP5.classList.remove("opacity");
+        imagemP7div.classList.remove("border");
+        imagemP7.classList.remove("opacity");
+        imagemP8div.classList.remove("border");
+        imagemP8.classList.remove("opacity");
+    } else if(bolaDaVez2 === 7){
+        imagemP7div.classList.add("border");
+        imagemP7.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-3.jpg"
+
+        imagemP5div.classList.remove("border");
+        imagemP5.classList.remove("opacity");
+        imagemP6div.classList.remove("border");
+        imagemP6.classList.remove("opacity");
+        imagemP8div.classList.remove("border");
+        imagemP8.classList.remove("opacity");
+    } else if(bolaDaVez2 === 8){
+        imagemP8div.classList.add("border");
+        imagemP8.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-4.jpg"
+
+        imagemP5div.classList.remove("border");
+        imagemP5.classList.remove("opacity");
+        imagemP6div.classList.remove("border");
+        imagemP6.classList.remove("opacity");
+        imagemP7div.classList.remove("border");
+        imagemP7.classList.remove("opacity");
+    }
+}
+
+// Imagem grande
+let imagemGrande2 = document.querySelector(".imagemGrande2")
+
+// Imagem pequena 5 clicada
+let imagemP5div = document.querySelector('#imagemPequena5');
+let imagemP5 = document.querySelector('.imagemPequena5');
+
+imagemP5div.addEventListener('click', ()=>{
+    bolaDaVez2 = 5
+    imageSelected()
+})
+
+// Imagem pequena 6 clicada
+let imagemP6div = document.querySelector('#imagemPequena6');
+let imagemP6 = document.querySelector('.imagemPequena6');
+
+imagemP6div.addEventListener('click', ()=>{
+    bolaDaVez2 = 6
+    imageSelected()
+})
+
+// Imagem pequena 7 clicada
+let imagemP7div = document.querySelector('#imagemPequena7');
+let imagemP7 = document.querySelector('.imagemPequena7');
+
+imagemP7div.addEventListener('click', ()=>{
+    bolaDaVez2 = 7
+    imageSelected()
+})
+
+// Imagem pequena 8 clicada
+let imagemP8div = document.querySelector('#imagemPequena8');
+let imagemP8 = document.querySelector('.imagemPequena8');
+
+imagemP8div.addEventListener('click', ()=>{
+    bolaDaVez2 = 8
+    imageSelected()
+})
+
+
+
+
+
+
+
+
+
 // CARRINHO
 
 let carrinho = document.querySelector(".carrinho")
@@ -277,3 +376,103 @@ lixeira.addEventListener('click', ()=>{
 })
 
 
+
+
+
+
+
+
+
+// MODAL
+const abrirModal = document.querySelector(".openModal")
+const closeModal = document.querySelector(".closeModal")
+const modal =  document.querySelector("dialog")
+
+abrirModal.onclick = ()=>{
+    modal.showModal()
+}
+
+closeModal.onclick = ()=>{
+    modal.close()
+}
+
+
+
+
+
+
+
+
+
+// BARRA LARANJA NO MENU
+const item1 = document.getElementById("1")
+const item2 = document.getElementById("2")
+const item3 = document.getElementById("3")
+const item4 = document.getElementById("4")
+const item5 = document.getElementById("5")
+
+var ativo = 0
+
+function barraLaranja() {
+    if(ativo === 1 ){
+        item1.classList.add("barraLaranja")
+
+        item2.classList.remove("barraLaranja")
+        item3.classList.remove("barraLaranja")
+        item4.classList.remove("barraLaranja")
+        item5.classList.remove("barraLaranja")
+    } else if(ativo === 2 ){
+        item2.classList.add("barraLaranja")
+
+        item1.classList.remove("barraLaranja")
+        item3.classList.remove("barraLaranja")
+        item4.classList.remove("barraLaranja")
+        item5.classList.remove("barraLaranja")
+    } else if(ativo === 3 ){
+        item3.classList.add("barraLaranja")
+
+        item2.classList.remove("barraLaranja")
+        item1.classList.remove("barraLaranja")
+        item4.classList.remove("barraLaranja")
+        item5.classList.remove("barraLaranja")
+    } else if(ativo === 4 ){
+        item4.classList.add("barraLaranja")
+
+        item2.classList.remove("barraLaranja")
+        item3.classList.remove("barraLaranja")
+        item1.classList.remove("barraLaranja")
+        item5.classList.remove("barraLaranja")
+    } else if(ativo === 5 ){
+        item5.classList.add("barraLaranja")
+
+        item2.classList.remove("barraLaranja")
+        item3.classList.remove("barraLaranja")
+        item4.classList.remove("barraLaranja")
+        item1.classList.remove("barraLaranja")
+    }
+}
+
+item1.addEventListener('click', ()=>{
+    ativo = 1
+    barraLaranja()
+})
+
+item2.addEventListener('click', ()=>{
+    ativo = 2
+    barraLaranja()
+})
+
+item3.addEventListener('click', ()=>{
+    ativo = 3
+    barraLaranja()
+})
+
+item4.addEventListener('click', ()=>{
+    ativo = 4
+    barraLaranja()
+})
+
+item5.addEventListener('click', ()=>{
+    ativo = 5
+    barraLaranja()
+})

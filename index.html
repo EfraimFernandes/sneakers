@@ -14,11 +14,11 @@
             </div>
             <div class="menu">
                 <ul class="menu">
-                    <li class="menu-item">Coleções</li>
-                    <li class="menu-item">Homens</li>
-                    <li class="menu-item">Mulheres</li>
-                    <li class="menu-item">Sobre</li>
-                    <li class="menu-item">Contato</li>
+                    <li id="1" class="menu-item">Coleções</li>
+                    <li id="2" class="menu-item">Homens</li>
+                    <li id="3" class="menu-item barraLaranja">Mulheres</li>
+                    <li id="4" class="menu-item">Sobre</li>
+                    <li id="5" class="menu-item">Contato</li>
                 </ul>
             </div>
         </div>
@@ -63,7 +63,7 @@
     <div class="body">
         <div class="imagens">
             <div class="imagemG">
-                <img class="imagemGrande" src="./imagens/image-product-1.jpg" alt="">
+                <img class="imagemGrande openModal" src="./imagens/image-product-1.jpg" alt="">
             </div>
 
             <div class="imagensP">
@@ -74,6 +74,20 @@
             </div>
         </div>
 
+        <dialog>
+            
+            <svg class="closeModal" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="hsl(26, 100%, 55%)" fill-rule="evenodd"/></svg>
+            <div class="imagemG">
+                <img class="imagemGrande2 openModal" src="./imagens/image-product-1.jpg" alt="">
+            </div>
+
+            <div class="imagensP">
+                <div id="imagemPequena5" class="border"><img class="imagemPequena5 opacity" src="./imagens/image-product-1-thumbnail.jpg" alt=""></div>
+                <div id="imagemPequena6"><img class="imagemPequena6" src="./imagens/image-product-2-thumbnail.jpg" alt=""></div>
+                <div id="imagemPequena7"><img class="imagemPequena7" src="./imagens/image-product-3-thumbnail.jpg" alt=""></div>
+                <div id="imagemPequena8"><img class="imagemPequena8" src="./imagens/image-product-4-thumbnail.jpg" alt=""></div>
+            </div>
+        </dialog>
 
         <div class="info">
             <div class="cabecalho">
@@ -113,7 +127,7 @@
                 <div class="add-cart">
                     <button class="add-cart-button">
                         <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/></svg>
-                        Add to cart
+                        Adicionar ao Carrinho
                     </button>
                 </div>
             </div>
