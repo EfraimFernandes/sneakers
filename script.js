@@ -97,11 +97,95 @@ imagemP4div.addEventListener('click', ()=>{
 
 
 
-// IMAGENS 
+// MODAL
+const abrirModal = document.querySelector(".openModal")
+const closeModal = document.querySelector(".closeModal")
+const modal =  document.querySelector(".dialog")
 
-var bolaDaVez2 = 1
+let proximo = document.querySelector(".proximo")
+let anterior = document.querySelector(".anterior")
 
-function imageSelected() {
+
+
+function imagemInicial() {
+    if(bolaDaVez === 1){
+        imagemP5div.classList.add("border");
+        imagemP5.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-1.jpg"
+
+        imagemP6div.classList.remove("border");
+        imagemP6.classList.remove("opacity");
+        imagemP7div.classList.remove("border");
+        imagemP7.classList.remove("opacity");
+        imagemP8div.classList.remove("border");
+        imagemP8.classList.remove("opacity");
+    } else if(bolaDaVez === 2){
+        imagemP6div.classList.add("border");
+        imagemP6.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-2.jpg"
+
+        imagemP5div.classList.remove("border");
+        imagemP5.classList.remove("opacity");
+        imagemP7div.classList.remove("border");
+        imagemP7.classList.remove("opacity");
+        imagemP8div.classList.remove("border");
+        imagemP8.classList.remove("opacity");
+    } else if(bolaDaVez === 3){
+        imagemP7div.classList.add("border");
+        imagemP7.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-3.jpg"
+
+        imagemP5div.classList.remove("border");
+        imagemP5.classList.remove("opacity");
+        imagemP6div.classList.remove("border");
+        imagemP6.classList.remove("opacity");
+        imagemP8div.classList.remove("border");
+        imagemP8.classList.remove("opacity");
+    } else if(bolaDaVez === 4){
+        imagemP8div.classList.add("border");
+        imagemP8.classList.add("opacity");
+        imagemGrande2.src = "./imagens/image-product-4.jpg"
+
+        imagemP5div.classList.remove("border");
+        imagemP5.classList.remove("opacity");
+        imagemP6div.classList.remove("border");
+        imagemP6.classList.remove("opacity");
+        imagemP7div.classList.remove("border");
+        imagemP7.classList.remove("opacity");
+    }
+}
+
+proximo.onclick = ()=>{
+    bolaDaVez2++
+    imageSelected2()
+}
+
+anterior.onclick = ()=>{
+    bolaDaVez2--
+    imageSelected2()
+}
+
+abrirModal.onclick = ()=>{
+    imagemInicial()
+    modal.showModal()
+}
+
+closeModal.onclick = ()=>{
+    modal.close()
+}
+
+
+
+
+
+
+
+
+// IMAGENS DO MODAL
+
+var bolaDaVez2 = 5
+
+function imageSelected2() {
     if(bolaDaVez2 === 5){
         imagemP5div.classList.add("border");
         imagemP5.classList.add("opacity");
@@ -146,6 +230,12 @@ function imageSelected() {
         imagemP6.classList.remove("opacity");
         imagemP7div.classList.remove("border");
         imagemP7.classList.remove("opacity");
+    } else if(bolaDaVez2 > 8) {
+        bolaDaVez2 = 5
+        imageSelected2()
+    } else if(bolaDaVez2 < 5) {
+        bolaDaVez2 = 8
+        imageSelected2()
     }
 }
 
@@ -158,7 +248,7 @@ let imagemP5 = document.querySelector('.imagemPequena5');
 
 imagemP5div.addEventListener('click', ()=>{
     bolaDaVez2 = 5
-    imageSelected()
+    imageSelected2()
 })
 
 // Imagem pequena 6 clicada
@@ -167,7 +257,7 @@ let imagemP6 = document.querySelector('.imagemPequena6');
 
 imagemP6div.addEventListener('click', ()=>{
     bolaDaVez2 = 6
-    imageSelected()
+    imageSelected2()
 })
 
 // Imagem pequena 7 clicada
@@ -176,7 +266,7 @@ let imagemP7 = document.querySelector('.imagemPequena7');
 
 imagemP7div.addEventListener('click', ()=>{
     bolaDaVez2 = 7
-    imageSelected()
+    imageSelected2()
 })
 
 // Imagem pequena 8 clicada
@@ -185,7 +275,7 @@ let imagemP8 = document.querySelector('.imagemPequena8');
 
 imagemP8div.addEventListener('click', ()=>{
     bolaDaVez2 = 8
-    imageSelected()
+    imageSelected2()
 })
 
 
@@ -374,27 +464,6 @@ lixeira.addEventListener('click', ()=>{
     menosQuantidade()
     console.log("A lixeira está sendo clicada")
 })
-
-
-
-
-
-
-
-
-
-// MODAL
-const abrirModal = document.querySelector(".openModal")
-const closeModal = document.querySelector(".closeModal")
-const modal =  document.querySelector("dialog")
-
-abrirModal.onclick = ()=>{
-    modal.showModal()
-}
-
-closeModal.onclick = ()=>{
-    modal.close()
-}
 
 
 
