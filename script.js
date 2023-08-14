@@ -346,11 +346,9 @@ function menosQuantidade(){
             let numQuantProd2 = parseInt(numQuant2.textContent)
             numQuantProd2 = quantidade
             numQuant2.textContent = numQuantProd2
-            console.log(numQuant2.textContent)
     
             nunQuantDisplay()
             atualizarTotal()
-            console.log("O botão foi apertado")
             buttomCard = false
         } else {
             let numQuant = document.querySelector(".numQuantProd")
@@ -361,10 +359,8 @@ function menosQuantidade(){
             let numQuantProd2 = parseInt(numQuant2.textContent)
             numQuantProd2 = quantidade
             numQuant2.textContent = numQuantProd2
-            console.log(numQuant2.textContent)
-    
+
             atualizarTotal()
-            console.log("O botão ainda não foi apertado")
         }
     }
 }
@@ -381,11 +377,9 @@ function maisQuantidade() {
         let numQuantProd2 = parseInt(numQuant2.textContent)
         numQuantProd2 = quantidade
         numQuant2.textContent = numQuantProd2
-        console.log(numQuant2.textContent)
 
         nunQuantDisplay()
         atualizarTotal()
-        console.log("O botão foi apertado")
         buttomCard = false
     } else {
         let numQuant = document.querySelector(".numQuantProd")
@@ -396,10 +390,8 @@ function maisQuantidade() {
         let numQuantProd2 = parseInt(numQuant2.textContent)
         numQuantProd2 = quantidade
         numQuant2.textContent = numQuantProd2
-        console.log(numQuant2.textContent)
 
         atualizarTotal()
-        console.log("O botão ainda não foi apertado")
     }
 }
 
@@ -462,7 +454,6 @@ addCardButtom.addEventListener('click', ()=>{
 
 lixeira.addEventListener('click', ()=>{
     menosQuantidade()
-    console.log("A lixeira está sendo clicada")
 })
 
 
