@@ -90,6 +90,18 @@ imagemP4div.addEventListener('click', ()=>{
 })
 
 
+let proximo2 = document.querySelector(".proximo2")
+let anterior2 = document.querySelector(".anterior2")
+
+proximo2.onclick = ()=>{
+    bolaDaVez++
+    imageSelected()
+}
+
+anterior2.onclick = ()=>{
+    bolaDaVez--
+    imageSelected()
+}
 
 
 
