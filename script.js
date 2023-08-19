@@ -477,11 +477,19 @@ lixeira.addEventListener('click', ()=>{
 
 
 // BARRA LARANJA NO MENU
-const item1 = document.getElementById("1")
-const item2 = document.getElementById("2")
-const item3 = document.getElementById("3")
-const item4 = document.getElementById("4")
-const item5 = document.getElementById("5")
+const item1 = document.getElementById("um")
+const item2 = document.getElementById("dois")
+const item3 = document.getElementById("tres")
+const item4 = document.getElementById("quatro")
+const item5 = document.getElementById("cinco")
+
+// BARRA LARANJA NO MENU "modal"
+const item6 = document.getElementById("seis")
+const item7 = document.getElementById("sete")
+const item8 = document.getElementById("oito")
+const item9 = document.getElementById("nove")
+const item10 = document.getElementById("dez")
+
 
 var ativo = 0
 
@@ -521,6 +529,41 @@ function barraLaranja() {
         item3.classList.remove("barraLaranja")
         item4.classList.remove("barraLaranja")
         item1.classList.remove("barraLaranja")
+    } else if(ativo === 6 ){
+        item6.classList.add("barraLaranja")
+
+        item7.classList.remove("barraLaranja")
+        item8.classList.remove("barraLaranja")
+        item9.classList.remove("barraLaranja")
+        item10.classList.remove("barraLaranja")
+    } else if(ativo === 7 ){
+        item7.classList.add("barraLaranja")
+
+        item6.classList.remove("barraLaranja")
+        item8.classList.remove("barraLaranja")
+        item9.classList.remove("barraLaranja")
+        item10.classList.remove("barraLaranja")
+    } else if(ativo === 8 ){
+        item8.classList.add("barraLaranja")
+
+        item7.classList.remove("barraLaranja")
+        item6.classList.remove("barraLaranja")
+        item9.classList.remove("barraLaranja")
+        item10.classList.remove("barraLaranja")
+    } else if(ativo === 9 ){
+        item9.classList.add("barraLaranja")
+
+        item7.classList.remove("barraLaranja")
+        item8.classList.remove("barraLaranja")
+        item6.classList.remove("barraLaranja")
+        item10.classList.remove("barraLaranja")
+    } else if(ativo === 10 ){
+        item10.classList.add("barraLaranja")
+
+        item7.classList.remove("barraLaranja")
+        item8.classList.remove("barraLaranja")
+        item9.classList.remove("barraLaranja")
+        item6.classList.remove("barraLaranja")
     }
 }
 
@@ -548,3 +591,50 @@ item5.addEventListener('click', ()=>{
     ativo = 5
     barraLaranja()
 })
+
+item6.addEventListener('click', ()=>{
+    ativo = 6
+    barraLaranja()
+})
+
+item7.addEventListener('click', ()=>{
+    ativo = 7
+    barraLaranja()
+})
+
+item8.addEventListener('click', ()=>{
+    ativo = 8
+    barraLaranja()
+})
+
+item9.addEventListener('click', ()=>{
+    ativo = 9
+    barraLaranja()
+})
+
+item10.addEventListener('click', ()=>{
+    ativo = 10
+    barraLaranja()
+})
+
+
+
+
+
+
+
+
+
+let menuOption = document.querySelector(".show-menu-options")
+let openMenuOption = document.querySelector(".openMenuOption")
+let closeMenuOption = document.querySelector(".closeMenuOption")
+
+openMenuOption.onclick = ()=>{
+    menuOption.classList.add("on")
+    menuOption.classList.remove("off")
+}
+
+closeMenuOption.onclick = ()=>{
+    menuOption.classList.add("off")
+    menuOption.classList.remove("on")
+}
