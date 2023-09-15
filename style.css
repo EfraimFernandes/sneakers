@@ -199,6 +199,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #2f3f2f;
 }
 
 .imagens{
@@ -916,6 +917,7 @@ dialog {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: #6f3f2f;
     }
 
     .imagemG {
@@ -969,6 +971,7 @@ dialog {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: #2f7f2f;
     }
 
     .imagens{
@@ -1032,6 +1035,7 @@ dialog {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: #2f3f9f;
     }
 
     .imagens{
@@ -1095,6 +1099,7 @@ dialog {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background-color: #000;
     }
 
     .imagens{
