@@ -955,7 +955,7 @@ dialog {
 
 @media (max-width: 400px) {
     .header {
-        width: 300px;
+        width: 320px;
         display: flex;
         padding: 1.2% 10% 1.2% ;
         margin-bottom: 20px;
@@ -981,9 +981,9 @@ dialog {
     }
 
     .imagemG {
-        margin-top: 90px;
+        margin-top: 85px;
         margin-left: 10px;
-        width: 370px;
+        width: 420px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1006,7 +1006,7 @@ dialog {
         z-index: 0.5;
         position: absolute;
         width: 340px;
-        margin-left: 0px;
+        margin-left: 10px;
     }
 
     .info {
