@@ -955,7 +955,7 @@ dialog {
 
 @media (max-width: 400px) {
     .header {
-        width: 320px;
+        width: 310px;
         display: flex;
         padding: 1.2% 10% 1.2% ;
         margin-bottom: 20px;
